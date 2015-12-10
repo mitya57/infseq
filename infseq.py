@@ -45,7 +45,7 @@ class _InfSequenceIterator(object):
 
     def __next__(self):
         self._index += 1
-        return self._sequence[self._index]
+        return self._sequence._get_value(self._index)
 
 
 class _InfSequenceBase(object):
