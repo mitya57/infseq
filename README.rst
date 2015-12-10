@@ -20,6 +20,8 @@ Creating sequences
   <InfSequence: 5 5 5 5 5 5 ...>
   >>> InfSequence(5, 6, ...)
   <InfSequence: 5 6 7 8 9 10 ...>
+  >>> InfSequence(lambda index: index * 2 + 1)
+  <InfSequence: 1 3 5 7 9 11 ...>
   >>> InfSequence.geometric_progression(3)
   <InfSequence: 1 3 9 27 81 243 ...>
   >>> InfSequence.cycle('a', 'b', 'c')
