@@ -4,6 +4,9 @@ Here, the word “lazy” means that values of the sequence will never be calcul
 unless they are really used, and the word “cached” means that every value will
 be calculated no more than once.
 
+Sequences can contain items of any type — such as numbers, strings or even
+other sequences.
+
 Using this module is pretty straightforward — everything just works. Here are
 some usage examples:
 
