@@ -68,10 +68,11 @@ class _InfSequenceBase(object):
     def _slice(self, start, step, stop):
         start = start or 0
         step = step or 1
-        if stop is None:
+        if stop is None and step >= 0:
             def new_generator(index):
                 return self._generator(start + step * index)
             return InfSequence(new_generator)
+        stop = -1 if stop is None else stop
         return map(self._get_value, range(start, stop, step))
 
     def __getitem__(self, index):

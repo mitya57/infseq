@@ -64,6 +64,8 @@ Slicing and prepending elements
   <InfSequence: 1 4 16 64 256 1024 ...>
   >>> list(a[5:10])  # a[5:10] returns a map object, because of laziness
   [32, 64, 128, 256, 512]
+  >>> list(a[4::-1])  # reverse slices also work
+  [16, 8, 4, 2, 1]
   >>> (5, 7) + a
   <InfSequence: 5 7 1 2 4 8 ...>
 
