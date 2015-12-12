@@ -145,7 +145,7 @@ class _InfSequenceBase(object):
         return InfSequence(lambda index: values_list[index % length])
 
     @staticmethod
-    def fibonacci(*values_list):
+    def fibonacci():
         result = InfSequence()
 
         def generator(index):
