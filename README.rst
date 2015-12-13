@@ -29,12 +29,10 @@ Creating sequences
   >>> InfSequence.fibonacci()
   <InfSequence: 0 1 1 2 3 5 ...>
 
-.. note::
-   For the ease of debugging the first six values are calculated when
-   ``repr()`` is called on the sequence. If you just create the sequence
-   without printing it, the values are not calculated. The number of items can
-   be adjusted by modifying the ``infseq.REPR_VALUES`` number (it is set to
-   6 by default).
+**Note**: for the ease of debugging the first six values are calculated when
+``repr()`` is called on the sequence. If you just create the sequence without
+printing it, the values are not calculated. The number of items can be adjusted
+by modifying the ``infseq.REPR_VALUES`` number (it is set to 6 by default).
 
 Retrieving the values
 ---------------------
