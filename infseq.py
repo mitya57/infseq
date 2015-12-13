@@ -151,6 +151,10 @@ class _InfSequenceBase(object):
         def generator(index):
             if index <= 1:
                 return index
+            # Calculate (or obtain from cache) all previous values
+            # subsequently to avoid deep recursion.
+            for i in range(index):
+                result._get_value(i)
             return result[index - 1] + result[index - 2]
         result._generator = generator
         return result
