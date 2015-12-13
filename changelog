@@ -1,3 +1,10 @@
+Version 0.2, 2015-12-13
+=======================
+
+* Add support for reverse slicing.
+* Avoid reaching max recursion depth when calculating values of ``fibonacci()``.
+* Documentation improvements.
+
 Version 0.1, 2015-12-10
 =======================
 
