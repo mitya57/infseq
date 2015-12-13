@@ -83,8 +83,6 @@ Arithmetic operations
   <InfSequence: 1 4 9 16 25 36 ...>
   >>> a + b
   <InfSequence: 2 4 7 12 21 38 ...>
-  >>> b.accumulate()  # a[0],  a[0] + a[1],  a[0] + a[1] + a[2], ...
-  <InfSequence: 1 3 6 10 15 21 ...>
 
 Applying any functions
 ----------------------
@@ -97,6 +95,35 @@ Applying any functions
   >>> import math
   >>> c.apply_function(math.sqrt)
   <InfSequence: 1.0 3.0 9.0 27.0 81.0 243.0 ...>
+
+Using the ``accumulate`` method
+-------------------------------
+
+The ``accumulate`` method returns a sequence of partial sums of the original
+sequence (similar to itertools.accumulate_)::
+
+  result[0] = a[0]
+  result[1] = a[0] + a[1]
+  result[2] = a[0] + a[1] + a[2]
+  ...
+
+.. _itertools.accumulate: https://docs.python.org/3/library/itertools.html#itertools.accumulate
+
+If a custom function is passed as an argument, it is used to do
+the reducing instead of the sum function.
+
+In the examples below we can get the sequence of *n(n+1)/2* and the sequence of
+*n!* using this method:
+
+.. code:: python
+
+  >>> from operator import mul
+  >>> b
+  <InfSequence: 1 2 3 4 5 6 ...>
+  >>> b.accumulate()
+  <InfSequence: 1 3 6 10 15 21 ...>
+  >>> b.accumulate(mul)
+  <InfSequence: 1 2 6 24 120 720 ...>
 
 Using the matrix multiplication operator
 ----------------------------------------
