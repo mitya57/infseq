@@ -1,3 +1,10 @@
+.. image:: https://api.travis-ci.org/mitya57/infseq.svg
+   :target: https://travis-ci.org/mitya57/infseq
+   :alt: Travis CI status
+
+Infinite sequences for Python
+=============================
+
 The ``infseq`` module implements cached lazy infinite sequences for Python 3.
 
 Here, the word “lazy” means that values of the sequence will never be calculated
