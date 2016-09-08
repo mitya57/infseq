@@ -58,6 +58,17 @@ Retrieving the values
   >>> a.partial_product(5)  # a[0] * ... * a[4]
   1024
 
+For loops
+---------
+
+.. code:: python
+
+  >>> for item in a:
+  ...     if item > 30:
+  ...         print(item)
+  ...         break
+  32
+
 Slicing and prepending elements
 -------------------------------
 
