@@ -119,8 +119,11 @@ class _InfSequenceBase(object):
         return reduce(operator.mul,
                       (self[index] for index in range(*range_args)))
 
-    def partial_reduce(self, n, func):
-        return reduce(func, (self[index] for index in range(n)))
+    def partial_reduce(self, n, func, initial=None):
+        if initial is None:
+            return reduce(func, (self[index] for index in range(n)))
+        else:
+            return reduce(func, (self[index] for index in range(n)), initial)
 
     def accumulate(self, func=operator.add):
         # Works like itertools.accumulate

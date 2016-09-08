@@ -57,6 +57,8 @@ Retrieving the values
   1008
   >>> a.partial_product(5)  # a[0] * ... * a[4]
   1024
+  >>> a.partial_reduce(5, lambda *args: '%s | %s' % args, initial='start')
+  'start | 1 | 2 | 4 | 8 | 16'
 
 For loops
 ---------
