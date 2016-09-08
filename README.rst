@@ -74,6 +74,21 @@ Slicing and prepending elements
   >>> (5, 7) + a
   <InfSequence: 5 7 1 2 4 8 ...>
 
+Zipping and enumerating sequences
+---------------------------------
+
+These work like Python’s own ``zip()`` and ``enumerate()``, yielding sequences
+of tuples.
+
+.. code:: python
+
+  >>> a.zip(InfSequence.geometric_progression(3))
+  <InfSequence: (1, 1) (2, 3) (4, 9) (8, 27) (16, 81) (32, 243) ...>
+  >>> a.enumerate()
+  <InfSequence: (0, 1) (1, 2) (2, 4) (3, 8) (4, 16) (5, 32) ...>
+  >>> a.enumerate(start=2)
+  <InfSequence: (2, 4) (3, 8) (4, 16) (5, 32) (6, 64) (7, 128) ...>
+
 Arithmetic operations
 ---------------------
 

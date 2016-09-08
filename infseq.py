@@ -131,6 +131,12 @@ class _InfSequenceBase(object):
         return InfSequence(lambda index: (iterable[index]
                            if index < length else self[index - length]))
 
+    def zip(self, other_seq):
+        return InfSequence(lambda index: (self[index], other_seq[index]))
+
+    def enumerate(self, start=0):
+        return InfSequence(lambda index: (index + start, self[index + start]))
+
     @staticmethod
     def arithmetic_progression(step, start_value=0):
         return InfSequence(lambda index: start_value + step * index)
